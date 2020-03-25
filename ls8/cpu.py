@@ -171,3 +171,4 @@ class CPU:
             else:
                 print(f"Error, unknown command {ir}")
                 sys.exit(1)
+                # d
