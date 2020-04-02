@@ -1,0 +1,66 @@
+CONVERT HEXADECIMAL TO BINARY
+hexadecimal - 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+
+Convert: 10100011 Step 1. start at the right side 1010 0011 -
+right nibble should be binary to hexa decimal 3 --> for decimal and hexa decimal A -->
+10 in decimal but it's A in hexadecimal
+
+Convert: C7 hex to binary
+
+C --> 12 decimal C 7 1100 0111
+
+C7 hex == 11000111 binary
+
+BITWISE OPERATOR
+~ -> NOT (Inversion) A NOT A 0 1 1 0
+
+& -> AND (Bitwise / Single Ampersand) A B A AND B 0 0 0 0 1 0 1 0 0 1 1 1
+
+NAND (Inverted AND) A B A OR B 0 0 1 0 1 1 1 0 1 1 1 0
+
+| -> OR (Bitwise / Single Pipe) A B A OR B 0 0 0 0 1 1 1 0 1 1 1 1
+
+^ -> XOR (if both are true then the result is false) A B A OR B 0 0 0 0 1 1 1 0 1 1 1 0
+
+Multi-bit numbers
+11101011 & 10011101
+
+10001011
+11011010 ^ 11100011
+
+00111001
+(mask out) 11010110 & 11110000
+
+11010000
+<< left shift 1111 <<1 11110
+
+right shift
+
+			1111
+1 111
+
+CPU
+CPUs
+bytes of data are stored in RAM (Memory)
+Larger 64-bit (8-byte) numbers, stored sequentially in RAM, that the CPU can operate on at once are called words
+the exact number of bytes per word depends on the architecture
+8 bytes for a 64-bit CPU
+4 bytes for a 32-bit CPU
+1 byte for an 8-bit CPU
+ALU performs arithmetic
+CPU Registers
+Think of them like variables that the CPU has its disposal
+similar to RAM, except stored directly on the CPU so they are much faster
+there are a limited number of them at your disposal, usually 8, 16, or 32 depending on the CPU
+They have fixed names R0, R1, or EAX, EBX etc. depending on the CPU
+Many CPUs can only perform math operations on registers which must be loaded from RAM first.
+(The x86 family can often perform math on registers quickly, or RAM slowly)
+size of the registers is the size of the CPU word
+CPU Instructions
+stored in RAM with other data
+are actually just numbers
+humans often use mnemonics to refer to the instruction in a human readable way
+The CPU keeps track of the address of the currently-executing instruction in RAM and performs different
+actions based on the instruction found there
+The address of the currently-executing instruction is held in a special register called the program counter
+CPUs usually have a significant number of instructions, around 50-200
